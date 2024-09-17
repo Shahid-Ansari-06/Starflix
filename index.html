@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" class="Starflix-Page">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="png" href="Starflix.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Starflix</title>
+</head>
+<body>
+   <div class="Starflix">
+    <nav class="Starflix-navbar">
+        <div class="navbar-left">
+            <img src="Starflix.png">
+            <span class="logo-text">&nbsp;Starflix</span>
+        </div> <a href="Search.html"> 
+        <div class="navbar-center">
+          <i class="fas fa-search search-icon"></i>
+        </div></a>
+        <div class="navbar-right">
+            <button class="open-app-btn">Shorts</button>
+            <i class="fas fa-bars menu-icon" id="menu-button"></i>
+        </div>
+    </nav>
+    <div class="Featured">
+        <h3> Featured Today</h3>
+    </div> 
+    <div class="featured-today">
+            <div class="carousel">
+            <div class="carousel-item active">
+                <img src="Jubin Nautiyal Cover.jpg">
+            </div>
+            <div class="carousel-item">
+                <img src="Arijit Singh Cover.png">
+            </div>
+            <div class="carousel-item">
+                <img src="Honey Singh Cover.jpg">
+            </div> 
+            </div>
+        </div>
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div><div class ="artists">
+    <h3> Popular Artists / Playlists</h3></div>
+        <section class="Images">
+<div class="shahid">
+    <img src="Jubin Nautiyal.jpg">
+     <h5> Jubin Nautiyal</h5>
+     </div><div class="shahid2">
+     <img src="Arijit Singh.jpg">
+     <h5> Arijit Singh</h5>
+     </div><div class="shahid3">
+     <img src="Honey Singh.jpg">
+     <h5> Honey Singh</h5>
+     </div><div class="shahid4">
+     <img src="Pritam.jpg">
+     <h5> Pritam</h5>
+     </div><div class="shahid5">
+     <img src="Vishal Mishra.jpg">
+     <h5> Vishal Mishra</h5>
+     </div><div class="shahid6">
+     <img src="Atif Aslam.jpg">
+     <h5> Atif Aslam</h5>
+     </div><div class="shahid7">
+     <img src="A.R. Rahman.jpeg">
+     <h5>A.R. Rahman</h5>
+     </div>
+</section>
+<div class="trending-section">
+    <ul class="song-list">
+        <li class="song-item">
+            <div class="song-cover-container">
+                <img src="Honey Singh Song.jpg" class="song-cover">
+            </div>
+            <div class="song-details">
+                <span class="song-title">Love Dose</span>
+                <span class="artist-name">Song by Honey Singh</span>
+            </div>
+            <audio id="audio1" src="Love Dose.mp3" download="Love Dose"></audio>
+            <div class="controls">
+                <button class="play-btn" data-audio="audio1"><i class="fas fa-play"></i></button>
+                <button class="pause-btn" data-audio="audio1" style="display:none;"><i class="fas fa-pause"></i></button>
+                <a href="Love Dose.mp3" download class="download-btn">
+                    <i class="fas fa-download download-icon"></i>
+                </a>
+            </div>
+        </li>
+        <li class="song-item">
+            <div class="song-cover-container">
+                <img src="Teri Sari Wish Pura Dunga.jpg"  class="song-cover">
+            </div>
+            <div class="song-details">
+                <span class="song-title">Teri Sari Wish Pura Dunga</span>
+                <span class="artist-name">Song by Diler Kharakiya
+                </span>
+            </div>
+            <audio id="audio2" src="Teri Sari Wish Pura Dunga.mp3"></audio>
+            <div class="controls">
+               <button class="play-btn" data-audio="audio2"><i class="fas fa-play"></i></button>
+                <button class="pause-btn" data-audio="audio2" style="display:none;"><i class="fas fa-pause"></i></button>
+                <a href="Teri Sari Wish Pura Dunga.mp3" download  class="download-btn">
+                    <i class="fas fa-download download-icon"></i>
+                </a>
+            </div></li>
+            <li class="song-item">
+                <div class="song-cover-container">
+                    <img src="Bonita Honey Singh.jpg"  class="song-cover">
+                </div>
+                <div class="song-details">
+                    <span class="song-title">BONITA</span>
+                    <span class="artist-name">Song by Honey Singh
+                </div>
+            <audio id="audio3" src="BONITA.mp3"></audio>
+            <div class="controls">
+                <button class="play-btn" data-audio="audio3"><i class="fas fa-play"></i></button>
+                <button class="pause-btn" data-audio="audio3" style="display:none;"><i class="fas fa-pause"></i></button>
+                <a href="BONITA.mp3" download  class="download-btn">
+                    <i class="fas fa-download download-icon"></i>
+                </a>
+            </div>
+        </li>
+        <li class="song-item">
+            <div class="song-cover-container">
+                <img src="Moto.jpg"  class="song-cover">
+            </div>
+            <div class="song-details">
+                <span class="song-title">Moto</span>
+                <span class="artist-name">Song by Diler Kharakiya
+            </div>
+        <audio id="audio4" src="Moto.mp3"></audio>
+        <div class="controls">
+            <button class="play-btn" data-audio="audio4"><i class="fas fa-play"></i></button>
+            <button class="pause-btn" data-audio="audio4" style="display:none;"><i class="fas fa-pause"></i></button>
+            <a href="Moto.mp3" download  class="download-btn">
+            <i class="fas fa-download download-icon"></i>
+            </a>      </div>
+    </li>
+    </ul>
+</div><div class="Greeting-Text">
+<div class="container">
+    <div id="greeting" class="typewriter"></div>
+</div></div>
+  <div class="menu-modal" id="menu-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <ul class="menu-list">
+                <li><a href="#" class="menu-item">Login</a></li>
+                <li><a href="#" class="menu-item">Download</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+               

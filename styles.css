@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+.Starflix-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+.navbar-left .logo-text{
+    font-size: 27px;
+}
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    font-size: 24px;
+    color: #1db954; 
+    margin-right: 8px;
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar-center {
+    flex: 1;
+    top:18px;
+    position: fixed;
+    right: 122.5px;
+    
+}
+
+.search-icon {
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.open-app-btn {
+    padding: 3px 7px;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+.open-app-btn a{
+    text-decoration: none;
+}
+@media (prefers-color-scheme: dark) {
+    .open-app-btn a{
+        color:black;
+}}
+@media (prefers-color-scheme: light) {
+            .open-app-btn a{
+                color:white;
+}}
+.menu-icon {
+    font-size: 21px;
+    cursor: pointer;
+}
+
+
+body.light-theme {
+    background-color: #fff;
+    color: #000;
+}
+
+.light-theme .Starflix-navbar {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+
+.light-theme .search-icon,
+.light-theme .menu-icon,
+.light-theme .logo-text {
+    color: #000;
+}
+
+.light-theme .open-app-btn {
+    background-color: #000;
+    color: #fff;
+}
+
+
+body.dark-theme {
+    background-color: #121212;
+    color: #fff;
+}
+
+.dark-theme .Starflix-navbar {
+    background-color: #000000;
+    border-bottom: 1px solid #282828;
+}
+
+.dark-theme .search-icon,
+.dark-theme .menu-icon,
+.dark-theme .logo-text {
+    color: #fff;
+}
+
+.dark-theme .open-app-btn {
+    background-color: #fff;
+    color: #000;
+}
+
+
+.menu-modal {
+    display: none; 
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    text-align: center;
+}
+.Images{
+    display: flex;
+    overflow-x: auto;
+}
+.menu-list {
+    list-style: none;
+}
+
+.menu-item {
+    display: block;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu-item:hover {
+    color: #1db954; 
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+}
+h3{
+    padding-top: 62.5px;
+}
+.artists h3{
+    position: absolute;
+    top:183px;
+    left:10px;
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .Starflix-Page{display : none;
+}}
+@media (min-width: 1025px) {
+   .Starflix-Page{
+    display: none;
+}}
+.Images {
+    display: flex;
+    gap: 7px;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+.shahid, .shahid1, .shahid2, .shahid3, .shahid4, .shahid5,.shahid6,.shahid7 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0; 
+    width: 100px;
+    padding-top: 20px;
+}
+
+.shahid img, .shahid1 img, .shahid2 img, .shahid3 img, .shahid4 img,.shahid5 img,.shahid6 img,.shahid7 img {
+    height: 105px; 
+    width: 100px; 
+    max-width: 100px; 
+    border-radius: 5px;
+}
+
+.shahid h5, .shahid1 h5, .shahid2 h5, .shahid3 h5, .shahid4 h5, .shahid5 h5,.shahid6 h5,.shahid7 h5 {
+    margin-top: 7px; 
+    text-align: center; 
+}
+.navbar-left img{
+    height: 35px;
+    width: 35px;
+    border-radius: 7px;
+}
+.featured-today {
+    padding: auto;
+    color: #ffffff;
+    border-radius: 5px;
+    width: 95%;
+    margin: auto;
+    text-align: left;
+    overflow: hidden;
+}
+@media (max-width: 768px) {    
+    .carousel {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+    }
+
+    .carousel-item {
+        min-width: 100%;
+        transition: transform 0.5s ease-in-out;
+        position: relative;
+        margin-top: 90px;
+    }
+
+    .carousel-item img {
+        width: 100%; 
+        height: 150px; 
+        border-radius: 10px;
+        object-fit: cover; 
+        max-width: none;
+    }
+}
+ .dots {
+        position: absolute;
+        top: 95px;
+        right: 17px;
+        display: flex;
+        gap: 5px;
+        z-index: 10; 
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+        background-color: #bbb;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0.7;
+    }
+
+    .dot.active {
+        background-color: #fff;
+        opacity: 1;
+    }
+
+.Featured h3{
+    position: absolute;
+    left:10px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.trending-section{
+    margin: 3px;
+}
+h2 {
+    color: #333333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.song-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.song-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    padding: 7px;
+}
+
+.song-cover-container {
+    width: 60px; 
+    height: 60px; 
+    margin-right: 15px;
+}
+
+.song-cover {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.song-details {
+    flex: 1;
+}
+
+.song-title {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.artist-name {
+    display: block;
+    font-size: 14px;
+    color: #666666;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.play-btn, .pause-btn {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 7px;
+}
+.pause-btn{
+    padding: 9px;
+}
+.play-btn:hover, .pause-btn:hover {
+    color: #fff;
+}
+@media (prefers-color-scheme: light) {
+    .play-btn, .pause-btn {
+        color: black;
+    }
+    .play-btn:hover, .pause-btn:hover {
+        color: #000;
+    }}
+    .download-btn{
+        color:#fff;
+        margin-right: 5px;
+    }
+    @media (prefers-color-scheme: light) {
+        .download-btn{
+            color:black;
+        }}
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:rgba(255, 255, 255, 0.8);
+            border-radius: 100px;
+            padding: 5px 10px;
+            max-width: 500px;
+            width: fit-content;
+            overflow: hidden;
+            font-weight: bold;
+            z-index: 1000;
+            font-size: 20px;
+        }
+        .Greeting-Text{
+            justify-content:center;
+            align-items: center;
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 1;
+            transition: opacity 7s ease-out;
+        }
+        .fade-out{
+            opacity: 0;
+        }
+        @media (prefers-color-scheme: light) {
+            .container{
+                color:#fff;
+                background-color: #000;
+            }}
+            @media (prefers-color-scheme: dark) {
+                .container{
+                    color:#000;
+                    background-color:white;
+                }}
+
+              
