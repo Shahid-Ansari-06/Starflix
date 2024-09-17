@@ -131,9 +131,3 @@ searchBar.addEventListener('input', function(event) {
 
 displayInitialSongs();
 document.getElementById('no-results').style.display = 'none';
-
-// Automatically focus the search bar
-window.onload = function() {
-    document.getElementById('searchBar').focus();
-  };
-  
