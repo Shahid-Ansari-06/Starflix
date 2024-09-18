@@ -1,0 +1,81 @@
+.body{
+    background-color: transparent;
+    z-index: 1000;
+}
+.card{
+    background-color: black;
+    width:95%;
+    border-radius: 3px;
+    left:50%;
+    transform: translate(-50%);
+    display: flex;
+    z-index: 1000;
+}
+.card img{
+    height:50px;
+    width:50px;
+    border-radius: 7px;
+    padding: 5px 5px;
+}
+
+.card{
+    bottom:10px;
+    position: fixed;
+    z-index: 10;
+    overflow:hidden;
+}
+
+.play-button, .pause-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+    right:15px;
+    bottom:13.5px;
+}
+.pause-button{
+    padding-right: 8.5px;
+}
+.play-button{
+    padding-right:6.5px ;
+}
+@media (prefers-color-scheme: light) {
+    .card{
+        background-color: rgb(235, 222, 222);
+    }
+    .play-button, .pause-button{
+        color:black;
+    }
+    .artist{
+        color:black;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .Song-Card{display : none;
+}}
+@media (min-width: 1025px) {
+   .Song-Card{
+    display: none;
+}}
+
+.title {
+    display: block;
+    font-size: 16px;
+    margin-top: 7px;
+    margin-left: 2px;
+    font-weight: bold;
+}
+
+.artist {
+    display: block;
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 3px;
+    margin-left: 2px;
+}
+.song-details {
+    flex: 1;
+}

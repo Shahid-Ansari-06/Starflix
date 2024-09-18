@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  #popupMessage {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 0s linear 1s;
+  }
+  
+  #popupMessage.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease-in-out;
+  }
+  
