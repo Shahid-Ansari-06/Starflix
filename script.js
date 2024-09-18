@@ -175,3 +175,65 @@ setTimeout(function() {
         elements[i].classList.add('fade-out');
     }
 }, 7000);
+
+// Get play and pause buttons for both audios
+const playBtn1 = document.querySelector('.play-button[data-audio="audio1"]'); // First code's play button
+const pauseBtn1 = document.querySelector('.pause-button[data-audio="audio1"]'); // First code's pause button
+const playBtn2 = document.querySelector('.play-btn[data-audio="audio1"]'); // Second code's play button
+const pauseBtn2 = document.querySelector('.pause-btn[data-audio="audio1"]'); // Second code's pause button
+
+
+const audio1 = document.getElementById('audio1');
+const audio2 = document.getElementById('audio2');
+
+
+function resetAllButtons() {
+  playBtn1.style.display = 'inline-block';
+  pauseBtn1.style.display = 'none';
+  playBtn2.style.display = 'inline-block';
+  pauseBtn2.style.display = 'none';
+}
+
+
+playBtn2.addEventListener('click', function() {
+ 
+  audio1.pause();
+  audio2.pause();
+  
+  audio1.play();
+
+  playBtn1.style.display = 'none';
+  pauseBtn1.style.display = 'inline-block';
+  playBtn2.style.display = 'none';
+  pauseBtn2.style.display = 'inline-block';
+});
+
+
+pauseBtn2.addEventListener('click', function() {
+  
+  audio1.pause();
+
+ 
+  resetAllButtons();
+});
+
+pauseBtn1.addEventListener('click', function() {
+  
+  audio1.pause();
+
+  resetAllButtons();
+});
+
+
+playBtn1.addEventListener('click', function() {
+ 
+  audio1.pause();
+  audio2.pause();
+  
+  audio1.play();
+
+  playBtn1.style.display = 'none';
+  pauseBtn1.style.display = 'inline-block';
+  playBtn2.style.display = 'none';
+  pauseBtn2.style.display = 'inline-block';
+});
