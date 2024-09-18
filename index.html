@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="png" href="Starflix.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Pop-Up Message.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Starflix</title>
 </head>
@@ -49,7 +50,7 @@
     <h3> Popular Artists / Playlists</h3></div>
         <section class="Images">
 <div class="shahid">
-    <img src="jubin Nautiyal.jpg">
+    <img src="Jubin Nautiyal.jpg">
      <h5> Jubin Nautiyal</h5>
      </div><div class="shahid2">
      <img src="Arijit Singh.jpg">
@@ -83,10 +84,10 @@
             </div>
             <audio id="audio1" src="Love Dose.mp3" download="Love Dose"></audio>
             <div class="controls">
-                <button class="play-btn" data-audio="audio1"><i class="fas fa-play"></i></button>
+                <button id="popupBtn" class="play-btn" data-audio="audio1"><i class="fas fa-play"></i></button>
                 <button class="pause-btn" data-audio="audio1" style="display:none;"><i class="fas fa-pause"></i></button>
                 <a href="Love Dose.mp3" download class="download-btn">
-                    <i class="fas fa-download download-icon"></i>
+                 <i class="fas fa-download download-icon"></i>
                 </a>
             </div>
         </li>
@@ -154,6 +155,32 @@
             </ul>
         </div>
     </div>
+
+    
+<!-- For pop-up message-->
+ <div id="popupMessage">
+    <html class="Song-Card">
+        <head> <title> Starflix</title>
+        <link rel="stylesheet" href="Song-Card.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <div class="card">
+            <img src="Honey Singh Song.jpg">
+            <div class="song-details">
+                <span class="title">Love Dose</span>
+                <span class="artist">Song by Honey Singh</span>
+            </div>
+            <audio id="audio1" src=""></audio>
+                <div class="controls">
+                    <button id="playBtn" class="play-button" data-audio="audio1"><i class="fas fa-play"></i></button>
+                    <button class="pause-button" data-audio="audio1" style="display:none;"><i class="fas fa-pause"></i></button>
+                  </div>       
+    </body>
+    </html> 
+</div>
+
+<script src="Pop-Up Message.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
